@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="com.emiappnw.nerdweather.MainActivity">
+
+    <ImageView
+        android:id="@+id/weatherBgImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="weatherimg"
+        android:src="@drawable/testweatherimg"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintDimensionRatio="9:10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currentTemp"
+        app:fontPath="fonts/nevis.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="70sp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showStatsDialog"
+        tools:text="105F" />
+
+    <TextView
+        android:id="@+id/currentLoc"
+        app:fontPath="fonts/nevis.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dresden, Germany"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentTemp"
+        tools:text="Dresden, Germany" />
+
+    <TextView
+        android:id="@+id/weatherDescription"
+        app:fontPath="fonts/nevis.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Really fucking hot"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentLoc"
+        tools:text="WEATHER CONDITION" />
+
+    <TextView
+        android:id="@+id/textView21"
+        app:fontPath="fonts/nevis.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherBgImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView22"
+        app:fontPath="fonts/nevis.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherBgImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        app:fontPath="fonts/nevis.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/weatherBgImg"
+        app:layout_constraintEnd_toStartOf="@+id/textView21"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <ImageButton
+        android:id="@+id/showStatsDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_timeline_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weatherBgImg" />
+
+    <ScrollView
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="32dp"
+        android:scrollbars="none"
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherBgImg">
+
+        <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ext:documentView_antialias="true"
+            ext:documentView_cacheConfig="auto_quality"
+            ext:documentView_hyphen="-"
+            ext:documentView_lineHeightMultiplier="1.5"
+            ext:documentView_maxLines="100"
+            ext:documentView_insetPaddingLeft="32dp"
+            ext:documentView_insetPaddingRight="32dp"
+            ext:documentView_insetPaddingTop="32dp"
+            ext:documentView_reverse="false"
+            ext:documentView_text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, se"
+            ext:documentView_textAlignment="justified"
+            ext:documentView_textColor="@android:color/tertiary_text_light"
+            ext:documentView_textFormat="plain"
+            ext:documentView_textSize="14sp"
+            ext:documentView_textTypefacePath="fonts/Lato-Regular.ttf"
+            ext:documentView_textSubPixel="true" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
