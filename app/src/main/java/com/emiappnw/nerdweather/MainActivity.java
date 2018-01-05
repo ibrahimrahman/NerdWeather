@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton showStatsDialog = findViewById(R.id.showStatsDialog);
 
         //Do stuff (TEST)
-        currentTemp.setText("TEMP");
+        currentTemp.setText("TMP C");
 
         //Switch between C and F
         currentTemp.setOnClickListener(new View.OnClickListener() {
