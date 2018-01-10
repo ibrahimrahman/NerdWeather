@@ -18,6 +18,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -37,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonShowPopupWindowClick(View view) {
-        ImageView bgImg = findViewById(R.id.weatherBgImg);
 
         // reference main layout
         ConstraintLayout mainLayout = findViewById(R.id.mainLayout);
@@ -51,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
         // inflate popup window layout
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+
         View popupView = inflater.inflate(R.layout.dialog_temp_stats, null);
+
+
 
         // create the popup window
         boolean focusable = true; // lets taps outside the popup also dismiss it
@@ -63,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         //show popup
         popupWindow.showAtLocation(mainLayout, Gravity.CENTER_HORIZONTAL, 0, -300);
     }
-
 
     //Inject Calligraphy into Context
     @Override
